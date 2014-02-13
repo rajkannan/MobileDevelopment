@@ -3,8 +3,6 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
-<!--This is prototype and all functionalies do not work. Database has not been created yet to hold the values.
-Check back later if you want to see a full functioning app - Raj -->
     <title>RK Feedback A1</title>
     <link href="css/themes/default/jquery.mobile-1.1.1.css" rel="stylesheet" type="text/css" />
     <link href="css/custom.css" rel="stylesheet" type="text/css" />
@@ -12,7 +10,7 @@ Check back later if you want to see a full functioning app - Raj -->
     <!-- JavaScript HTML requirements -->
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/jquery.mobile-1.1.1.min.js" type="text/javascript"></script>
-    <script src="js/geo.js" type="text/javascript"></script>
+    
 </head>
 
 <body>
@@ -63,14 +61,16 @@ Check back later if you want to see a full functioning app - Raj -->
     </header>
     
     <section data-role="content">
-    	<label for="basic">Business Name:</label>
-		<input type="text" name="name" id="basic" data-mini="true" />
-		<label for="basic">Reviewer Email:</label>
-		<input type="text" name="name" id="basic" data-mini="true" />
-		<label for="basic">Reviewer Comments:</label>
-		<input type="text" name="name" id="basic" data-mini="true" />
-		<label for="basic">Overall Rating(1-10):</label>
-		<input type="number" name="name" id="basic" data-mini="true" min=0 max=10 />
+	    <form>
+    	<label for="business">Business Name:</label>
+		<input type="text" name="business" id="business" data-mini="true" />
+		<label for="reviewer">Reviewer Email:</label>
+		<input type="text" name="reviewer" id="reviewer" data-mini="true" />
+		<label for="comments">Reviewer Comments:</label>
+		<input type="text" name="comments" id="comments" data-mini="true" />
+		<label for="rating">Overall Rating(1-10):</label>
+		<input type="number" name="rating" id="rating" data-mini="true" min=0 max=10 />
+		</form>
 		<a href="index.html" data-role="button" data-inline="true" data-theme="b">Save</a>
 	</section>
        
@@ -93,7 +93,7 @@ Check back later if you want to see a full functioning app - Raj -->
     </header>
       
     <section data-role="content">
-		    <ul data-role="listview" data-split-icon="info" data-inset="true">
+		    <ul data-role="listview" id="editFeedback" data-split-icon="info" data-inset="true">
             <li>
 			<a href="#rkEditFeedback">
 			<h4>Business Name: Tim Hortons, Pioneer Park Drive</h4>
@@ -131,14 +131,16 @@ Check back later if you want to see a full functioning app - Raj -->
 		</div>
     </header>
 	   <section data-role="content">
-    	<label for="basic">Business Name:</label>
-		<input type="text" name="name" id="basic"  value=" Tim Hortons, Pioneer Park Drive " data-mini="true" />
-		<label for="basic">Reviewer Email:</label>
-		<input type="text" name="name" id="basic" data-mini="true" value="awu-cc@conestogac.on.ca"/>
-		<label for="basic">Reviewer Comments:</label>
-		<input type="text" name="name" id="basic" data-mini="true" value="Good coffee!" />
-		<label for="basic">Overall Rating(1-10):</label>
-		<input type="number" name="name" id="basic" data-mini="true" value ="9" min=0 max=10 />
+	    <form>
+    	<label for="business">Business Name:</label>
+		<input type="text" name="name" id="business"  value=" Tim Hortons, Pioneer Park Drive " data-mini="true" />
+		<label for="email">Reviewer Email:</label>
+		<input type="text" name="email" id="email" data-mini="true" value="awu-cc@conestogac.on.ca"/>
+		<label for="comments">Reviewer Comments:</label>
+		<input type="text" name="comments" id="comments" data-mini="true" value="Good coffee!" />
+		<label for="rating">Overall Rating(1-10):</label>
+		<input type="number" name="rating" id="rating" data-mini="true" value ="9" min=0 max=10 />
+		</form>
 		<div data-role="controlgroup" data-type="horizontal">
 		<a href="index.html" data-role="button">Cancel</a>
 		<a href="index.html" data-role="button" data-theme="a">Delete</a>
@@ -165,8 +167,8 @@ Check back later if you want to see a full functioning app - Raj -->
 		</div>
     </header>
     <section data-role="content">
-    	<label for="basic">Default reviewer email:</label>
-		<input type="text" name="name" id="basic" data-mini="true" />
+    	<label for="defemail">Default reviewer email:</label>
+		<input type="text" name="defemail" id="defemail" data-mini="true" />
 		<a href="index.html" data-role="button" data-theme="b">Save Defaults</a>
 		<a href="index.html" data-role="button"data-theme="a">Clear Database</a>
 	</section>
